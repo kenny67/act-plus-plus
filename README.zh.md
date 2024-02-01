@@ -25,22 +25,30 @@ You can find all scripted/human demo for simulated environments [here](https://d
 - ``imitate_episodes.py`` Train and Evaluate ACT
   
    脚本功能： 训练和评估 ACT
+
 - ``policy.py`` An adaptor for ACT policy
   
   功能： 策略的适配器
+
 - ``detr`` Model definitions of ACT, modified from DETR
   
   功能： ACT 的模型定义，修改自 DETR
+
 - ``sim_env.py`` Mujoco + DM_Control environments with joint space control
   功能： 具有联合空间控制的 Mujoco + DM_Control 环境
+
 - ``ee_sim_env.py`` Mujoco + DM_Control environments with EE space control
   功能： 具有 EE 空间控制的 Mujoco + DM_Control 环境
+
 - ``scripted_policy.py`` Scripted policies for sim environments
   功能： 模拟环境的脚本化策略
+
 - ``constants.py`` Constants shared across files
   功能： 跨文件共享的常量
+
 - ``utils.py`` Utils such as data loading and helper functions
   功能： 数据加载和辅助函数等实用程序
+
 - ``visualize_episodes.py`` Save videos from a .hdf5 dataset
   功能： 保存 .hdf5 为扩展名的视频文件， 里面是 HDF5数据集
 
@@ -112,7 +120,7 @@ To train ACT:
 
 训练 ACT
 
-```训练 ACT
+```训练
 # Transfer Cube task
 python3 imitate_episodes.py --task_name sim_transfer_cube_scripted --ckpt_dir <ckpt dir> --policy_class ACT --kl_weight 10 --chunk_size 100 --hidden_dim 512 --batch_size 8 --dim_feedforward 3200 --num_epochs 2000  --lr 1e-5 --seed 0
 ```

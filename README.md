@@ -4,11 +4,13 @@
 
 中文翻译内容，请查看链接
 
-[act-plus-plus/README.zh.md at main · kenny67/act-plus-plus (github.com)](https://github.com/kenny67/act-plus-plus/blob/main/README.zh.md)
+[act-plus-plus/README.zh.md at main · kenny67/act-plus-plus (github.com)
+
+](https://github.com/kenny67/act-plus-plus/blob/main/README.zh.md)
+
+[论文翻译](https://github.com/kenny67/act-plus-plus/blob/main/README.doc.md)
 
 如果有什么地方不对的，请提PR修改，谢谢！
-
-
 
 This repo contains the implementation of ACT, Diffusion Policy and VINN, together with 2 simulated environments:
 Transfer Cube and Bimanual Insertion. You can train and evaluate them in sim or real.
