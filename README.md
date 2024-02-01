@@ -1,17 +1,25 @@
 # Imitation Learning algorithms and Co-training for Mobile ALOHA
 
-
 #### Project Website: https://mobile-aloha.github.io/
+
+中文翻译内容，请查看链接
+
+[act-plus-plus/README.zh.md at main · kenny67/act-plus-plus (github.com)](https://github.com/kenny67/act-plus-plus/blob/main/README.zh.md)
+
+如果有什么地方不对的，请提PR修改，谢谢！
+
+
 
 This repo contains the implementation of ACT, Diffusion Policy and VINN, together with 2 simulated environments:
 Transfer Cube and Bimanual Insertion. You can train and evaluate them in sim or real.
 For real, you would also need to install [Mobile ALOHA](https://github.com/MarkFzp/mobile-aloha). This repo is forked from the [ACT repo](https://github.com/tonyzhaozh/act).
 
 ### Updates:
+
 You can find all scripted/human demo for simulated environments [here](https://drive.google.com/drive/folders/1gPR03v05S1xiInoVJn7G7VJ9pDCnxq9O?usp=share_link).
 
-
 ### Repo Structure
+
 - ``imitate_episodes.py`` Train and Evaluate ACT
 - ``policy.py`` An adaptor for ACT policy
 - ``detr`` Model definitions of ACT, modified from DETR
@@ -21,7 +29,6 @@ You can find all scripted/human demo for simulated environments [here](https://d
 - ``constants.py`` Constants shared across files
 - ``utils.py`` Utils such as data loading and helper functions
 - ``visualize_episodes.py`` Save videos from a .hdf5 dataset
-
 
 ### Installation
 
@@ -67,10 +74,9 @@ To visualize the simulated episodes after it is collected, run
 Note: to visualize data from the mobile-aloha hardware, use the visualize_episodes.py from https://github.com/MarkFzp/mobile-aloha
 
 To train ACT:
-    
+
     # Transfer Cube task
     python3 imitate_episodes.py --task_name sim_transfer_cube_scripted --ckpt_dir <ckpt dir> --policy_class ACT --kl_weight 10 --chunk_size 100 --hidden_dim 512 --batch_size 8 --dim_feedforward 3200 --num_epochs 2000  --lr 1e-5 --seed 0
-
 
 To evaluate the policy, run the same command but add ``--eval``. This loads the best validation checkpoint.
 The success rate should be around 90% for transfer cube, and around 50% for insertion.
@@ -82,4 +88,5 @@ For real-world data where things can be harder to model, train for at least 5000
 Please refer to [tuning tips](https://docs.google.com/document/d/1FVIZfoALXg_ZkYKaYVh-qOlaXveq5CtvJHXkY25eYhs/edit?usp=sharing) for more info.
 
 ### [ACT tuning tips](https://docs.google.com/document/d/1FVIZfoALXg_ZkYKaYVh-qOlaXveq5CtvJHXkY25eYhs/edit?usp=sharing)
+
 TL;DR: if your ACT policy is jerky or pauses in the middle of an episode, just train for longer! Success rate and smoothness can improve way after loss plateaus.
